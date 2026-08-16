@@ -48,8 +48,6 @@ ML-Assignment-2/
     └── random_forest.py
 ```
 
-The five model implementation files are Python `.py` files as required by the assignment.
-
 ## Run Locally
 ```bash
 pip install -r requirements.txt
