@@ -177,4 +177,103 @@ st.dataframe(pd.DataFrame(comparison).style.format({
     "Recall": "{:.4f}", "F1": "{:.4f}", "MCC": "{:.4f}"
 }), use_container_width=True)
 
+# ---------------------------------------------------------
+# Model Performance Observations
+# ---------------------------------------------------------
+
+st.subheader("Model Performance Observations")
+
+observations = {
+    "Logistic Regression":
+        "Performs very well on this dataset with strong accuracy, precision, recall, and F1-score. It is effective because the dataset is relatively well separated.",
+
+    "Decision Tree":
+        "Provides good classification performance and is easy to interpret. However, a single decision tree can be more sensitive to the training data and may have slightly lower generalization performance.",
+
+    "kNN":
+        "Provides good classification performance after feature scaling. Its performance depends on the choice of k and the distance between samples.",
+
+    "Naive Bayes":
+        "Provides competitive performance and is computationally efficient. Its performance may be affected by the assumption that features are conditionally independent.",
+
+    "Random Forest (Ensemble)":
+        "Provides strong and stable performance by combining multiple decision trees. The ensemble approach generally reduces overfitting and improves generalization."
+}
+
+observation_table = []
+
+for model_name in [
+    "Logistic Regression",
+    "Decision Tree",
+    "kNN",
+    "Naive Bayes",
+    "Random Forest (Ensemble)"
+]:
+    observation_table.append({
+        "ML Model Name": model_name,
+        "Observation about model performance": observations[model_name]
+    })
+
+observation_df = pd.DataFrame(observation_table)
+
+
+# Use HTML table inside a horizontally scrollable container
+html_table = observation_df.to_html(
+    index=False,
+    escape=False
+)
+
+html_table = html_table.replace(
+    "<th>",
+    '<th style="text-align: center; padding: 10px; white-space: nowrap;">'
+)
+
+# Style table cells
+html_table = html_table.replace(
+    "<td>",
+    '<td style="padding: 10px; vertical-align: top;">'
+)
+
+st.markdown(
+    f"""
+    <div style="
+        overflow-x: auto;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    ">
+        <div style="min-width: 1100px;">
+            {html_table}
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# ---------------------------------------------------------
+# Overall Winner
+# ---------------------------------------------------------
+
+st.subheader("Overall Winner")
+
+comparison_df = pd.DataFrame(comparison)
+
+# Find model with highest Recall
+winner_row = comparison_df.loc[
+    comparison_df["Recall"].idxmax()
+]
+
+winner = winner_row["ML Model Name"]
+winner_recall = winner_row["Recall"]
+
+st.success(
+    f"🏆 {winner} is the overall winner for this dataset "
+    f"based on the highest Recall ({winner_recall:.4f})."
+)
+
+st.write(
+    "Recall is used as the primary metric for selecting the overall winner."
+)
+
 st.info("Positive class = Malignant. All five models use the same stratified 20% test split (random_state=42).")
