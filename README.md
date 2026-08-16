@@ -12,6 +12,9 @@ Implement and compare exactly the five classification models specified in the as
 **Task:** Binary classification  
 **Positive class:** Malignant
 
+## Repository Link
+https://github.com/2025ac05197-wilp/ML-Assignment-2
+
 ## Models Implemented
 1. Logistic Regression
 2. Decision Tree Classifier
@@ -20,10 +23,8 @@ Implement and compare exactly the five classification models specified in the as
 5. Random Forest (Ensemble)
 
 ## Evaluation Metrics
-Accuracy, AUC, Precision, Recall, F1 Score, and Matthews Correlation Coefficient (MCC).
+<img width="1026" height="221" alt="image" src="https://github.com/user-attachments/assets/9a7a9c37-4b25-42fe-a71d-7d66d142483a" />
 
-## Repository Link
-https://github.com/2025ac05197-wilp/ML-Assignment-2
 
 ## Streamlit App Link
 https://ml-assignment-2-models-classification.streamlit.app/
