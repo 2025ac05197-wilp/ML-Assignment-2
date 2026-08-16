@@ -7,6 +7,7 @@ Implement and compare exactly the five classification models specified in the as
 **Dataset:** Breast Cancer Wisconsin (Diagnostic)  
 **Source:** UCI Machine Learning Repository  
 **Dataset URL:** https://archive.ics.uci.edu/dataset/17/breast%2Bcancer%2Bwisconsin%2Bdiagnostic?utm_source=chatgpt.com
+
 **Instances:** 569  
 **Features:** 30  
 **Task:** Binary classification  
@@ -23,10 +24,10 @@ Implement and compare exactly the five classification models specified in the as
 Accuracy, AUC, Precision, Recall, F1 Score, and Matthews Correlation Coefficient (MCC).
 
 ## Repository Link
-`https://github.com/2025ac05197-wilp/ML-Assignment-2`
+https://github.com/2025ac05197-wilp/ML-Assignment-2
 
 ## Streamlit App Link
-`https://ml-assignment-2-models-classification.streamlit.app/`
+https://ml-assignment-2-models-classification.streamlit.app/
 
 ## Repository Structure
 ```text
