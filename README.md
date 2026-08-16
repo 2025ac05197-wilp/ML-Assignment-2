@@ -25,7 +25,7 @@ Accuracy, AUC, Precision, Recall, F1 Score, and Matthews Correlation Coefficient
 `https://github.com/2025ac05197-wilp/ML-Assignment-2`
 
 ## Streamlit App Link
-`PASTE YOUR STREAMLIT COMMUNITY CLOUD LINK HERE`
+`https://ml-assignment-2-models-classification.streamlit.app/`
 
 ## Repository Structure
 ```text
