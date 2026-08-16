@@ -25,6 +25,16 @@ https://github.com/2025ac05197-wilp/ML-Assignment-2
 ## Evaluation Metrics
 <img width="1026" height="221" alt="image" src="https://github.com/user-attachments/assets/9a7a9c37-4b25-42fe-a71d-7d66d142483a" />
 
+## Model Performance Observations
+
+ML Model Name            Observation about model performance
+Logistic Regression	     Performs very well on this dataset with strong accuracy, precision, recall, and F1-score. It is effective because the dataset is relatively well separated.
+Decision Tree	         Provides good classification performance and is easy to interpret. However, a single decision tree can be more sensitive to the training data and may have slightly lower generalization performance.
+kNN	                     Provides good classification performance after feature scaling. Its performance depends on the choice of k and the distance between samples.
+Naive Bayes	             Provides competitive performance and is computationally efficient. Its performance may be affected by the assumption that features are conditionally independent.
+Random Forest            Provides strong and stable performance by combining multiple decision trees. The ensemble approach generally reduces overfitting and improves generalization.
+
+
 
 ## Streamlit App Link
 https://ml-assignment-2-models-classification.streamlit.app/
