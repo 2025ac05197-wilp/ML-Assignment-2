@@ -246,6 +246,7 @@ st.markdown(
             {html_table}
         </div>
     </div>
+    <br>
     """,
     unsafe_allow_html=True
 )
@@ -261,19 +262,20 @@ comparison_df = pd.DataFrame(comparison)
 
 # Find model with highest Recall
 winner_row = comparison_df.loc[
-    comparison_df["Recall"].idxmax()
+    comparison_df["F1"].idxmax()
 ]
 
 winner = winner_row["ML Model Name"]
-winner_recall = winner_row["Recall"]
+winner_f1 = winner_row["F1"]
 
 st.success(
     f"🏆 {winner} is the overall winner for this dataset "
-    f"based on the highest Recall ({winner_recall:.4f})."
+    f"based on the highest F1 Score ({winner_f1:.4f})."
 )
 
 st.write(
-    "Recall is used as the primary metric for selecting the overall winner."
+    "F1 Score is used as the primary metric for selecting the overall winner "
+    "because it provides a balance between Precision and Recall."
 )
 
 st.info("Positive class = Malignant. All five models use the same stratified 20% test split (random_state=42).")
