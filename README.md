@@ -22,7 +22,7 @@ Implement and compare exactly the five classification models specified in the as
 Accuracy, AUC, Precision, Recall, F1 Score, and Matthews Correlation Coefficient (MCC).
 
 ## Repository Link
-`PASTE YOUR GITHUB REPOSITORY LINK HERE`
+`https://github.com/2025ac05197-wilp/ML-Assignment-2`
 
 ## Streamlit App Link
 `PASTE YOUR STREAMLIT COMMUNITY CLOUD LINK HERE`
